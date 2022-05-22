@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Program Horoskop</h1>
+    <button >Click here!</button>
+    <p>Keberuntungan kamu hari ini:</p>
+    <p>__________________________________</p>
+
+    <p id="rslt"></p>
+        
+    <script>
+        const btn = document.querySelector('button');
+        let result = document.getElementById('rslt');
+        const horoskop = ['Hebat!!', 'Hebat!!', 'Boleh Juga!', 'Boleh Juga!', 'Boleh Juga!', 'Boleh Juga!', 'Mengerikan', 'Boleh Juga!', 'Boleh Juga!', 'Mengerikan'];
+
+        function getRandomInt(min, max){
+            return Math.floor(Math.random() * (max - min) ) + min;
+        }
+        btn.addEventListener('click', () => {
+            let index = getRandomInt(0, horoskop.length-1);
+            console.log(index);
+            result.innerHTML += horoskop[index] + "<br>";
+        });
+        
+
+        
+    </script>
+</body>
+</html>
